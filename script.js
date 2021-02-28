@@ -6,9 +6,7 @@ inBox.className = ('form-control');
 AddItems();
 
 
-inBox.addEventListener('submit', function(s) {
-    btn.click();
-})
+
 
 
 function AddItems() {
