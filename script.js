@@ -28,7 +28,7 @@ function AddItems() {
             let checkBox = document.createElement('input');
             let removeButton = document.createElement('button');
             removeButton.setAttribute('type', 'button');
-            removeButton.innerHTML = 'Remove';
+            removeButton.innerHTML = 'Remove &times';
             removeButton.className = ('btn btn-primary float-right');
             removeButton.addEventListener('click', function(r) {
                 this.parentElement.remove();
