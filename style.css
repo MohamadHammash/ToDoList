@@ -1,0 +1,16 @@
+    #lista {
+        list-style-type: decimal !important;
+        display: inline-flexbox;
+    }
+    
+    .checkBox {
+        margin-right: 2%;
+    }
+    /* .undone {
+        background-color: red;
+    }
+    */
+    
+    .done {
+        text-decoration: line-through;
+    }
