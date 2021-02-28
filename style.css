@@ -1,12 +1,16 @@
-    #lista {
-        list-style-type: decimal !important;
-        display: inline-flexbox;
-    }
-    
-    .checkBox {
-        margin-right: 2%;
-    }
-    
-    .done {
-        text-decoration: line-through;
-    }
+#lista {
+    list-style: decimal !important;
+    display: inline-flexbox;
+}
+
+#Lista>li {
+    list-style-type: decimal !important;
+}
+
+.checkBox {
+    margin-right: 2%;
+}
+
+.done {
+    text-decoration: line-through;
+}

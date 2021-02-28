@@ -1,6 +1,6 @@
 const inBox = document.querySelector('#inBox');
 const btn = document.querySelector('#addButton');
-btn.className = ('btn bg-primary text-light btn-outline-secondary')
+btn.className = ('btn bg-primary text-light btn-outline-secondary mr-2')
 inBox.className = ('form-control');
 const form = document.querySelector('#inputForm');
 
@@ -12,6 +12,8 @@ form.addEventListener('submit', function(e) {
     form.reset();
 
 })
+
+
 
 function AddItems() {
 
@@ -27,27 +29,39 @@ function AddItems() {
             let li = document.createElement('li');
             let checkBox = document.createElement('input');
             let removeButton = document.createElement('button');
+            let span = document.createElement('span');
             removeButton.setAttribute('type', 'button');
             removeButton.innerHTML = 'Remove &times';
             removeButton.className = ('btn btn-primary float-right');
             removeButton.addEventListener('click', function(r) {
                 this.parentElement.remove();
             })
+            let editButton = document.createElement('button');
+            editButton.setAttribute('type', 'button');
+            editButton.innerHTML = 'Edit';
+            editButton.className = ('btn btn-primary float-right mr-2 px-4');
             let ToDoText;
             checkBox.setAttribute('type', 'checkbox');
             checkBox.className = ('checkBox');
             li.appendChild(checkBox)
             li.className = ('list-group-item bg-danger text-light m-1');
-            ToDoText = li.appendChild(document.createTextNode(userInput));
+            li.appendChild(span);
+            ToDoText = span.innerHTML = userInput;
             li.appendChild(removeButton);
+            li.appendChild(editButton);
             list.appendChild(li);
+            editButton.addEventListener('click', function(ed) {
+                console.log(this.previousSibling.previousSibling);
+                this.previousSibling.previousSibling.contentEditable = true;
+
+            })
             checkBox.addEventListener('change', function() {
                 if (this.checked) {
-                    li.className = ('list-group-item bg-success text-light done')
+                    li.className = ('list-group-item bg-success text-light  m-1 done')
                     console.log("Checkbox is checked..");
 
                 } else {
-                    li.className = ('list-group-item bg-danger text-light')
+                    li.className = ('list-group-item bg-danger text-light  m-1')
                     console.log("Checkbox is not checked..");
                 }
             })
