@@ -46,7 +46,7 @@ function AddItems() {
             li.appendChild(checkBox)
             li.className = ('list-group-item bg-danger text-light m-1');
             li.appendChild(span);
-            ToDoText = span.innerHTML = userInput;
+            ToDoText = span.innerHTML = userInput.trim().charAt(0).toUpperCase() + userInput.slice(1).toLowerCase();
             li.appendChild(removeButton);
             li.appendChild(editButton);
             list.appendChild(li);
