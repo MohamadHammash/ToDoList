@@ -1,10 +1,11 @@
 #lista {
-    list-style: decimal !important;
+    /* list-style: decimal !important; */
     display: inline-flexbox;
 }
 
-#Lista>li {
-    list-style-type: decimal !important;
+ol>.list-group-item {
+    display: list-item !important;
+    list-style-position: inside;
 }
 
 .checkBox {
