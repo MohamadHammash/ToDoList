@@ -15,3 +15,17 @@ ol>.list-group-item {
 .done {
     text-decoration: line-through;
 }
+
+.footerId {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 0%;
+    padding-bottom: 10px;
+    background-color: rgb(117, 170, 201);
+}
+
+.FooterPar {
+    color: black;
+    font-family: cursive;
+}
